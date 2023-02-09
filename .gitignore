@@ -5,5 +5,3 @@ target/
 log/
 *.iml
 *.iws
-pom.xml
-src/
