@@ -14,17 +14,11 @@ public class Test_HillelUa {
         WebElement labelTesting = driver.findElement
                 (By.xpath("//p[@class='course-cat-bar_label'][contains(text(), 'Тестування')]"));
 
-        WaitUtils.WaitUtilsIsClickable(driver, labelTesting);
+        WaitUtils.waitUtilsIsClickable(driver, labelTesting);
         labelTesting.click();
 
         WebElement textHead = driver.findElement(By.xpath("//h1[@class='hero-title']"));
-        WaitUtils.WaitUtilsIsVisible(driver, textHead, "Курси тестування");
-
-        if (textHead.isDisplayed()) {
-            System.out.println("Element " + textHead.getText() + " is displayed");
-        } else {
-            System.out.println("Element " + textHead.getText() + " is not displayed");
-        }
+        WaitUtils.waitUtilsIsDisplayed(driver, textHead, "Курси тестування");
 
         driver.quit();
     }
