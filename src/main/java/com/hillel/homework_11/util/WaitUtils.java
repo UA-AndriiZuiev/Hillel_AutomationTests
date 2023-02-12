@@ -15,7 +15,7 @@ public class WaitUtils {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    public static void waitUtilsIsDisplayed(WebDriver driver, WebElement element, String text) {
+    public static void waitUtilsToBePresentText(WebDriver driver, WebElement element, String text) {
         wait = new WebDriverWait(driver, TIMEWAIT);
         wait.until(ExpectedConditions.textToBePresentInElement(element, text));
     }

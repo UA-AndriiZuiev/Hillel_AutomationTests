@@ -18,7 +18,7 @@ public class Test_HillelUa {
         labelTesting.click();
 
         WebElement textHead = driver.findElement(By.xpath("//h1[@class='hero-title']"));
-        WaitUtils.waitUtilsIsDisplayed(driver, textHead, "Курси тестування");
+        WaitUtils.waitUtilsToBePresentText(driver, textHead, "Курси тестування");
 
         driver.quit();
     }
