@@ -8,6 +8,7 @@ public class ConfigProvider {
     private static final Properties PROP = initProperties();
     public static String BROWSER = PROP.getProperty("browser");
     public static String BASE_URL = PROP.getProperty("base.url");
+    public static String QA_AUTOMATION_PAGE_URL = PROP.getProperty("qaAutotestingPage.url");
 
     private ConfigProvider() {
     }

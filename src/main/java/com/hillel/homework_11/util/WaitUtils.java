@@ -1,5 +1,6 @@
 package com.hillel.homework_11.util;
 
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,11 +13,20 @@ public class WaitUtils {
 
     public static void waitUtilsIsClickable(WebDriver driver, WebElement element) {
         wait = new WebDriverWait(driver, TIMEWAIT);
+        wait.ignoring(StaleElementReferenceException.class);
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
     public static void waitUtilsTextPresentInElement(WebDriver driver, WebElement element, String text) {
         wait = new WebDriverWait(driver, TIMEWAIT);
+        wait.ignoring(StaleElementReferenceException.class);
         wait.until(ExpectedConditions.textToBePresentInElement(element, text));
     }
+
+    public static void waitUtilsElementIsVisible(WebDriver driver, WebElement element) {
+        wait = new WebDriverWait(driver, TIMEWAIT);
+        wait.ignoring(StaleElementReferenceException.class);
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
 }
