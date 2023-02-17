@@ -9,7 +9,6 @@ public class Test_AutoQAHillelUa {
     private static By xpathQaAutotest = By.xpath("//a[@class='-icon-square course-bar -icon-square'][@href='https://ithillel.ua/courses/qa-automation']");
 
     public static void main(String[] args) {
-        // WebDriver driver = WebDriverFactory.getDriver();
 
         HomePage homePage = new HomePage(driver);
         homePage.open();

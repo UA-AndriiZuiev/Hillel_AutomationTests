@@ -7,8 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class QaAutotestPage extends BasePage {
-    private static String xpathCourseTitle = "//span[@class='course-descriptor_header-text']";
-    private static String xpathCourseRate = "//span[@class='course-rating_average']";
+    private String xpathCourseTitle = "//span[@class='course-descriptor_header-text']";
+    private String xpathCourseRate = "//span[@class='course-rating_average']";
     private String xpathTitle = "//div[@class='course-descriptor']";
 
     public QaAutotestPage(WebDriver driver) {
