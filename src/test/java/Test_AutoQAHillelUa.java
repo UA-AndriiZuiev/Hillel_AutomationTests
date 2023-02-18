@@ -1,6 +1,7 @@
 import com.hillel.homework_11.PageObjects.HomePage;
 import com.hillel.homework_11.PageObjects.QaAutotestPage;
 import com.hillel.homework_11.driver.WebDriverFactory;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -17,8 +18,8 @@ public class Test_AutoQAHillelUa {
         QaAutotestPage qaAutotestPage = new QaAutotestPage(driver);
         qaAutotestPage.ensureOpened();
 
-        System.out.println(qaAutotestPage.getCourseTitle());
-        System.out.println(qaAutotestPage.getCourseRate());
+        Assertions.assertEquals("Курс QA Automation", qaAutotestPage.getCourseTitle(), "Title is not equals 'Курс QA Automation'");
+        Assertions.assertEquals("4.9", qaAutotestPage.getCourseRate(), "Course Rate is not 4.9");
 
         driver.quit();
     }
