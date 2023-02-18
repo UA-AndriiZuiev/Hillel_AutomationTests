@@ -1,5 +1,6 @@
 package com.hillel.homework_11.util;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,5 +19,10 @@ public class WaitUtils {
     public static void waitUtilsTextPresentInElement(WebDriver driver, WebElement element, String text) {
         wait = new WebDriverWait(driver, TIMEWAIT);
         wait.until(ExpectedConditions.textToBePresentInElement(element, text));
+    }
+
+    public static void waitUtilsElementInvisibility(WebDriver driver, By xpathElement) {
+        wait = new WebDriverWait(driver, TIMEWAIT);
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(xpathElement));
     }
 }
