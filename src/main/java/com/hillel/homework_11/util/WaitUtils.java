@@ -26,4 +26,10 @@ public class WaitUtils {
         wait = new WebDriverWait(driver, TIMEWAIT);
         wait.until(ExpectedConditions.invisibilityOfElementLocated(xpathElement));
     }
+
+    public static void waitUtilsElementIsVisible(WebDriver driver, WebElement element) {
+        wait = new WebDriverWait(driver, TIMEWAIT);
+        wait.ignoring(StaleElementReferenceException.class);
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
 }
