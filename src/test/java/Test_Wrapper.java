@@ -19,13 +19,12 @@ public class Test_Wrapper {
         driver.manage().window().maximize();
 
         element = driver.findElement(xpathProgrammingBtn);
-        wrapper = new Wrapper(driver);
-        wrapper.onClick(element);
+        wrapper.onClick(driver, element);
 
         element = driver.findElement(xpathLogoHomePage);
-        wrapper.onClick(element, xpathLogoHomePage);
+        wrapper.onClick(driver, element, xpathLogoHomePage);
 
         element = driver.findElement(xpathJavaProBtn);
-        wrapper.isClickable(element);
+        wrapper.isClickable(driver, element);
     }
 }
