@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.By;
 
 public class WaitUtils {
 
@@ -23,10 +24,14 @@ public class WaitUtils {
         wait.until(ExpectedConditions.textToBePresentInElement(element, text));
     }
 
+    public static void waitUtilsElementInvisibility(WebDriver driver, By xpathElement) {
+        wait = new WebDriverWait(driver, TIMEWAIT);
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(xpathElement));
+    }
+    
     public static void waitUtilsElementIsVisible(WebDriver driver, WebElement element) {
         wait = new WebDriverWait(driver, TIMEWAIT);
         wait.ignoring(StaleElementReferenceException.class);
         wait.until(ExpectedConditions.visibilityOf(element));
     }
-
 }
