@@ -8,6 +8,6 @@ public class FileStream {
     public static void main(String[] args) throws IOException {
         UserData userData = new UserData("Andrey", "zuevandrey1979@gmail.com", String.valueOf(36));
         ReadWriteFile.serialize(filePath, userData);
-        ReadWriteFile.deserialize(filePath).getPeopleInfo();
+        ReadWriteFile.deserialize(filePath);
     }
 }

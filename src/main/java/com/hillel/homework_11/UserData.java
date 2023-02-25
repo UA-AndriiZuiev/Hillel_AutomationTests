@@ -38,8 +38,4 @@ public class UserData {
     public String getAge() {
         return age;
     }
-
-    public String getPeopleInfo() {
-        return name + '\n' + email + '\n' + age + '\n';
-    }
 }
