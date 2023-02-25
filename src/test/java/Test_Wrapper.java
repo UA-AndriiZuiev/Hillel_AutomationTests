@@ -26,5 +26,7 @@ public class Test_Wrapper {
 
         element = driver.findElement(xpathJavaProBtn);
         wrapper.isClickable(driver, element);
+
+        driver.quit();
     }
 }
