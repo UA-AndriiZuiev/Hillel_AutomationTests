@@ -10,10 +10,6 @@ import org.openqa.selenium.WebElement;
 public class BlogPage extends BasePage {
     private By xpathPublicationsBnt = By.xpath("//button[@class='site-nav-link'][@data-dropdown-trigger='publications']");
     private By xpathBlogLogo = By.xpath("//span[@class='site-logo-link'][@href='https://blog.ithillel.ua/']");
-    private By xpathListPublications = By.xpath("//ul[@class='site-nav-publications_list']/li");
-    private By xpathFrontEndBnt = By.xpath("//a[@href='https://blog.ithillel.ua/publications/frontend']");
-    private By xpathQABtn = By.xpath("//a[@href='https://blog.ithillel.ua/publications/qa']");
-    private By xpathGameDevBtn = By.xpath("//a[@href='https://blog.ithillel.ua/publications/gamedev']");
 
     public BlogPage(WebDriver driver) {
         super(driver);
@@ -35,23 +31,5 @@ public class BlogPage extends BasePage {
         WebElement publicationsBtn = driver.findElement(xpathPublicationsBnt);
         Wrapper.isClickable(driver, publicationsBtn);
         return publicationsBtn;
-    }
-
-    public WebElement FrontEndBtnElement() {
-        WebElement frontEndBtn = driver.findElement(xpathFrontEndBnt);
-        Wrapper.isClickable(driver, frontEndBtn);
-        return frontEndBtn;
-    }
-
-    public WebElement getQABntElement() {
-        WebElement qABtn = driver.findElement(xpathQABtn);
-        Wrapper.isClickable(driver, qABtn);
-        return qABtn;
-    }
-
-    public WebElement getGameDevBntElement() {
-        WebElement gameDevBtn = driver.findElement(xpathGameDevBtn);
-        Wrapper.isClickable(driver, gameDevBtn);
-        return gameDevBtn;
     }
 }

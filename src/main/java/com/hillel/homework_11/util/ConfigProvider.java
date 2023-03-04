@@ -15,9 +15,6 @@ public class ConfigProvider {
     public static String BASE_URL = PROP.getProperty("base.url");
     public static String QA_AUTOMATION_PAGE_URL = PROP.getProperty("qaAutotestingPage.url");
     public static String BLOG_PAGE_URL = PROP.getProperty("blogPage.url");
-    public static String GAMEDEV_PAGE_URL = PROP.getProperty("gameDev.url");
-    public static String QA_PAGE_URL = PROP.getProperty("qa.url");
-    public static String FRONTEND_PAGE_URL = PROP.getProperty("front-end.url");
     public static final int NEWSCOUNT_FRONTENDPAGE = 121;
     public static final int NEWSCOUNT_QAPAGE = 87;
     public static final int NEWSCOUNT_GAMEDEVPAGE = 5;

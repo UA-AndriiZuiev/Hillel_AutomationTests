@@ -4,6 +4,8 @@ import org.openqa.selenium.*;
 import com.hillel.homework_11.util.WaitUtils;
 import org.openqa.selenium.interactions.Actions;
 
+import java.util.List;
+
 public class Wrapper {
 
     private static WebDriver driver;
@@ -27,17 +29,23 @@ public class Wrapper {
         WaitUtils.waitUtilsIsClickable(driver, element);
     }
 
-    public static void ScrollPageDown(WebDriver driver){
+    public static void ScrollPageDown(WebDriver driver) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         Actions action = new Actions(driver);
         long lastHeight = 0;
-        long  height = 1;
-        
+        long height = 1;
+
         while (lastHeight != height) {
             action.pause(1200);
             action.sendKeys(Keys.END).build().perform();
             lastHeight = height;
             height = (long) js.executeScript("return document.body.scrollHeight");
         }
+    }
+
+    public static List ListNews(WebDriver driver, By xpathListNews) {
+        Wrapper.ScrollPageDown(driver);
+        List<WebElement> webElementList = driver.findElements(xpathListNews);
+        return webElementList;
     }
 }
