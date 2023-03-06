@@ -3,7 +3,6 @@ package com.hillel.homework_11.driver;
 import org.openqa.selenium.*;
 import com.hillel.homework_11.util.WaitUtils;
 import org.openqa.selenium.interactions.Actions;
-
 import java.util.List;
 
 public class Wrapper {
@@ -43,8 +42,22 @@ public class Wrapper {
         }
     }
 
-    public static List ListNews(WebDriver driver, By xpathListNews) {
-        Wrapper.ScrollPageDown(driver);
+    public static List<WebElement> ListElements(WebDriver driver, By xpathListNews) {
+        List<WebElement> webElementList = driver.findElements(xpathListNews);
+        return webElementList;
+    }
+
+    public static void onClickSelective(String topicForTest, List<WebElement> allTopics){
+        for (int i = 0; i <= allTopics.size(); i++){
+            if(topicForTest.equals(allTopics.get(i).getText())){
+                allTopics.get(i).click();
+                break;
+            }
+        }
+    }
+
+    public static List<WebElement> ListNews(WebDriver driver, By xpathListNews) {
+        ScrollPageDown(driver);
         List<WebElement> webElementList = driver.findElements(xpathListNews);
         return webElementList;
     }

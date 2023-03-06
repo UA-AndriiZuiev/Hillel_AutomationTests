@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 import java.util.stream.Stream;
 
@@ -18,6 +20,8 @@ public class ConfigProvider {
     public static final int NEWSCOUNT_FRONTENDPAGE = 121;
     public static final int NEWSCOUNT_QAPAGE = 87;
     public static final int NEWSCOUNT_GAMEDEVPAGE = 5;
+    public static List<String> topic= new ArrayList<>();
+
     private ConfigProvider() {
     }
 
@@ -29,5 +33,12 @@ public class ConfigProvider {
             throw new RuntimeException("Could not load property file", e);
         }
         return properties;
+    }
+
+    public static List topicForTest (){
+        topic.add("Front-end");
+        topic.add("Тестування");
+        topic.add("GameDev");
+        return topic;
     }
 }

@@ -6,10 +6,12 @@ import com.hillel.homework_11.util.WaitUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import java.util.List;
 
 public class BlogPage extends BasePage {
     private By xpathPublicationsBnt = By.xpath("//button[@class='site-nav-link'][@data-dropdown-trigger='publications']");
     private By xpathBlogLogo = By.xpath("//span[@class='site-logo-link'][@href='https://blog.ithillel.ua/']");
+    private By xpathListTeam = By.xpath("//ul[@class='site-nav-publications_list']/li");
 
     public BlogPage(WebDriver driver) {
         super(driver);
@@ -27,9 +29,13 @@ public class BlogPage extends BasePage {
         WaitUtils.waitUtilsElementIsVisible(driver, blogLogo);
     }
 
-    public WebElement BlogPublicationsBtn() {
+    public WebElement blogPublicationsBtn() {
         WebElement publicationsBtn = driver.findElement(xpathPublicationsBnt);
-        Wrapper.isClickable(driver, publicationsBtn);
         return publicationsBtn;
+    }
+
+    public List<WebElement> listPublications() {
+        List<WebElement> list = Wrapper.ListElements(driver, xpathListTeam);
+        return list;
     }
 }
