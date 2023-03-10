@@ -1,7 +1,6 @@
 package JUnit;
 
 import com.hillel.homework_11.PageObjects.*;
-import com.hillel.homework_11.driver.WebDriverFactory;
 import com.hillel.homework_11.driver.Wrapper;
 import com.hillel.homework_11.util.ConfigProvider;
 import org.junit.jupiter.api.Assertions;
@@ -9,14 +8,11 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-import java.util.List;
 import java.util.stream.Stream;
 
 public class FirstTest extends BaseTest {
-    private WebDriver driver = WebDriverFactory.getDriver();
+    //private WebDriver driver = WebDriverFactory.getDriver();
     private HomePage homePage = new HomePage(driver);
     private BlogPage blogPage = new BlogPage(driver);
 

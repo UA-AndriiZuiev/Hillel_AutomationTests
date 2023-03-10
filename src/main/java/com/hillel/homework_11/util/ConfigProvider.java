@@ -1,14 +1,9 @@
 package com.hillel.homework_11.util;
 
-import org.junit.jupiter.params.provider.ValueSource;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-import java.util.stream.Stream;
 
 public class ConfigProvider {
     private static final String CONFIG_PATH = "config.properties";
