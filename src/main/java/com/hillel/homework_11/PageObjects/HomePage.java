@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 public class HomePage extends BasePage {
 
     private static String xpathLogo = "//*[@class='section-content_logo']";
+    private static By xpathBlogPageBtn= By.xpath("//a[@class='site-nav-link'][@href='https://blog.ithillel.ua']");
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -30,5 +31,9 @@ public class HomePage extends BasePage {
         WebElement element = driver.findElement(xpath);
         WaitUtils.waitUtilsIsClickable(driver, element);
         element.click();
+    }
+
+    public WebElement getBlogBtnElement(){
+        return driver.findElement(xpathBlogPageBtn);
     }
 }

@@ -3,13 +3,13 @@ package com.hillel.homework_11.util;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.By;
 
 public class WaitUtils {
 
-    private static final long TIMEWAIT = 5;
+    private static final long TIMEWAIT = 10;
     private static WebDriverWait wait;
 
     public static void waitUtilsIsClickable(WebDriver driver, WebElement element) {
