@@ -1,5 +1,5 @@
-import com.hillel.homework_11.PageObjects.HomePage;
-import com.hillel.homework_11.PageObjects.QaAutotestPage;
+import com.hillel.homework_11.pageObjects.HomePage;
+import com.hillel.homework_11.pageObjects.QaAutotestPage;
 import com.hillel.homework_11.driver.WebDriverFactory;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;

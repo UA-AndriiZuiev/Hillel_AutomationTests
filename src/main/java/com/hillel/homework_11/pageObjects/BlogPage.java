@@ -1,4 +1,4 @@
-package com.hillel.homework_11.PageObjects;
+package com.hillel.homework_11.pageObjects;
 
 import com.hillel.homework_11.driver.Wrapper;
 import com.hillel.homework_11.util.ConfigProvider;
