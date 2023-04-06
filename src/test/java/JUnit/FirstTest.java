@@ -12,7 +12,7 @@ import org.openqa.selenium.By;
 import java.util.stream.Stream;
 
 public class FirstTest extends BaseTest {
-    //private WebDriver driver = WebDriverFactory.getDriver();
+
     private HomePage homePage = new HomePage(driver);
     private BlogPage blogPage = new BlogPage(driver);
 
