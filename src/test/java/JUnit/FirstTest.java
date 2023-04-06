@@ -1,6 +1,6 @@
 package JUnit;
 
-import com.hillel.homework_11.PageObjects.*;
+import com.hillel.homework_11.pageObjects.*;
 import com.hillel.homework_11.driver.Wrapper;
 import com.hillel.homework_11.util.ConfigProvider;
 import org.junit.jupiter.api.Assertions;
@@ -12,7 +12,7 @@ import org.openqa.selenium.By;
 import java.util.stream.Stream;
 
 public class FirstTest extends BaseTest {
-    //private WebDriver driver = WebDriverFactory.getDriver();
+
     private HomePage homePage = new HomePage(driver);
     private BlogPage blogPage = new BlogPage(driver);
 

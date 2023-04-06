@@ -1,4 +1,4 @@
-package com.hillel.homework_11.PageObjects;
+package com.hillel.homework_11.pageObjects;
 
 import org.openqa.selenium.WebDriver;
 
