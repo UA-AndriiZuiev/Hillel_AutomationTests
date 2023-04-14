@@ -86,8 +86,8 @@
                 <version>${maven-surfire-plugin}</version>
                 <configuration>
                     <suiteXmlFiles>
-                       <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
-                   </suiteXmlFiles>
+                        <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
                 </configuration>
             </plugin>
         </plugins>
