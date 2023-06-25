@@ -12,7 +12,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven-surfire-plugin>3.0.0-M9</maven-surfire-plugin>
         <log4j>2.13.0</log4j>
-        <allure-testng-version>2.13.9</allure-testng-version>
+        <allure-testng-version>2.17.3</allure-testng-version>
     </properties>
     <dependencies>
         <dependency>
@@ -95,7 +95,7 @@
                         <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <systemPropertyVariables>
-                        <allure.results.directory>D:\Hillel_AutoQA\Zuiev_12122022\Hillel_AutomationTests\target\allure-results</allure.results.directory>
+                        <allure.results.directory>d:\Project_Idea\Hillel_AutomationTest\Hillel_AutomationTests\target\allure-results\</allure.results.directory>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
@@ -105,7 +105,7 @@
                 <version>2.10.0</version>
                 <configuration>
                     <properties>
-                        <allure.results.directory>target/allure-results</allure.results.directory>
+                        <allure.results.directory>d:\Project_Idea\Hillel_AutomationTest\Hillel_AutomationTests\target\allure-results\</allure.results.directory>
                     </properties>
                 </configuration>
             </plugin>
