@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!--<suite name="Pofig">-->
+<!--    <test name="Regression">-->
+<!--        <packages>-->
+<!--            <package name="testNg"></package>-->
+<!--        </packages>-->
+<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
+<!--</suite> &lt;!&ndash; Suite &ndash;&gt;-->
+
 <suite name="Pofig">
-    <test name="Regression">
-        <packages>
-            <package name="testNg"></package>
-        </packages>
+    <test name="Cucumbrer_TestNG">
+        <classes>
+            <class name="cucumber.CucumberTestRunner"></class>
+        </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
